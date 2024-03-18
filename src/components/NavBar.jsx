@@ -92,6 +92,18 @@ export default function NavBar() {
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1022 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     let handler = (e) => {
       if (!navbarRef.current.contains(e.target)) {
         setIsOpen(false);
@@ -101,6 +113,9 @@ export default function NavBar() {
     document.addEventListener("mousedown", handler);
 
     // Pulisci l'evento quando il componente viene smontato
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
   }, [isOpen]);
 
   // const changeLanguage = (lang) => {
@@ -197,7 +212,7 @@ export default function NavBar() {
             </button>
             <motion.button
               onClick={() => setLang(lang === "it" ? "en" : "it")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 w-6  `}
+              className={`ml-3 flex items-center justify-center rounded-full p-1 w-8  `}
               whileHover={{ scale: 1.2, y: -2 }}
             >
               {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
@@ -281,7 +296,7 @@ export default function NavBar() {
 
                 <motion.button
                   onClick={() => setLang(lang === "it" ? "en" : "it")}
-                  className={`sm:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-6 `}
+                  className={`sm:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-8 `}
                   whileHover={{ scale: 1.2, y: -2 }}
                 >
                   {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
