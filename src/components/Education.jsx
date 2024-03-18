@@ -16,7 +16,6 @@ const Details = ({ type, time, place, info }) => {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
-        viewport={{ once: true }}
       >
         {/* &nbsp; */}
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
