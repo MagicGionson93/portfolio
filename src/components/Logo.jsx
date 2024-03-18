@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <div className="flex items-center justify-center lg:mt-0 mt-1">
       <motion.a
-        href="/"
+        href="/portfolio/"
         className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2x1 font-bold 
         border border-solid border-transparent dark:border-light"
         whileHover={{

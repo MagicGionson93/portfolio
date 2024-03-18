@@ -27,7 +27,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
       <motion.div
         href={link}
         target="_blank"
-        className="w-1/2cursor-pointer overflow-hidden rounded-lg lg:w-full"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
       >

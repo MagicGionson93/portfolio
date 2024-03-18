@@ -181,7 +181,7 @@ export default function NavBar() {
             >
               <nav className="flex items-center flex-col justify-center">
                 <CustomMobileLink
-                  href="/portfolio/home"
+                  href="/portfolio/"
                   title="Home"
                   className=""
                   toggle={handleClick}

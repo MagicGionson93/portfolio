@@ -10,7 +10,7 @@ export default function Footer() {
         <Layout className="py-8 flex items-center justify-between dark:text-light lg:flex-col lg:py-6 sm:!p-6 xs:p-5 ">
           <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
           <div className="flex items-center lg:py-2">
-            Build With{" "}
+            Built With{" "}
             <span className="text-primary text-2xl px-1 ">&hearts;</span>{" "}
             by&nbsp;
             <a
