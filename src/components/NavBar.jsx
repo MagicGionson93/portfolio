@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import CV from "../../public/CV/CV-Giovanni-Pasini.pdf";
 
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import {
@@ -11,6 +12,7 @@ import {
   DribbbleIcon,
   SunIcon,
   MoonIcon,
+  CurriculumIcon,
 } from "./icons";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -141,6 +143,15 @@ export default function NavBar() {
 
           <nav className="flex items-center justify-center flex-wrap ">
             <motion.a
+              href={CV}
+              target={"_blank"}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-6 mx-3 dark:fill-light"
+            >
+              <CurriculumIcon />
+            </motion.a>
+            <motion.a
               href="https://github.com/MagicGionson93"
               target={"_blank"}
               whileHover={{ y: -2 }}
@@ -207,6 +218,15 @@ export default function NavBar() {
               </nav>
 
               <nav className="flex items-center justify-center flex-wrap ">
+                <motion.a
+                  href="https://www.linkedin.com/in/giovanni-pasini/"
+                  target={"_blank"}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-6 mx-3 sm:mx-1"
+                >
+                  <CurriculumIcon />
+                </motion.a>
                 <motion.a
                   href="https://github.com/MagicGionson93"
                   target={"_blank"}

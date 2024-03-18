@@ -37,11 +37,18 @@ export default function Home() {
                 xl:!text-5xl lg:!text-center lg:!size-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="mt-8 text-base font-medium dark:text-light md:text-sm sm:text-xs">
-                Come junior full-stack developer, mi impegno a trasformare idee
-                in applicazioni web. Esplora i miei ultimi progetti e articoli,
-                che mostrano la mia competenza in React.js e sviluppo web.
+                Benvenuto nel mio portfolio! Mi chiamo Giovanni Pasini e sono un
+                appassionato junior full-stack developer con una forte dedizione
+                nel trasformare idee in potenti applicazioni web. Vivo in Italia
+                e mi impegno costantemente a rimanere al passo con le più
+                recenti tecnologie e pratiche di sviluppo. Qui potrai esplorare
+                i miei ultimi progetti, che dimostrano la mia competenza
+                specialmente nell'utilizzo di React.js e nello sviluppo web in
+                generale. Sono sempre alla ricerca di nuove sfide e opportunità
+                di crescita, quindi non esitare a contattarmi se desideri
+                collaborare o discutere di idee innovative!
               </p>
-              <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
+              {/* <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
                 <a
                   href={CV}
                   target={"_blank"}
@@ -63,7 +70,7 @@ export default function Home() {
                 >
                   Contatto
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </Layout>

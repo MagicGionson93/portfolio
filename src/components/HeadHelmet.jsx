@@ -3,11 +3,8 @@ import { useLocation } from "react-router-dom";
 
 export default function HeadHelmet({ title }) {
   if (title === "/portfolio/") {
-    console.log(title);
     title = "Home";
   } else {
-    console.log(title);
-
     title = useLocation().pathname;
 
     title = title.replace("/portfolio/", "");
