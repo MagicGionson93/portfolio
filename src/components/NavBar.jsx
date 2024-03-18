@@ -132,7 +132,7 @@ export default function NavBar() {
     <>
       <header
         className=" w-full px-32 py-8 font-medium flex items-center justify-between                  
-      dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 xs:px-2
+      dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 xs:px-8
       mmd:sticky mmd:z-30 mmd:top-0 mmd:backdrop-blur-xl mmd:border-b-2 mmd:border-dark mmd:dark:border-light "
         ref={navbarRef}
       >
