@@ -47,8 +47,8 @@ export default function Experince() {
   });
   return (
     <>
-      <div className="my-64">
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <div className="my-64 sm:my-24  xs:my-24">
+        <h2 className="font-bold text-6xl mb-24 w-full text-center lg:!size-5xl md:!text-5xl sm:!text-3xl xs:!text-4xl">
           {experienceTitle}
         </h2>
         <div

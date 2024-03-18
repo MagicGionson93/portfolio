@@ -8,7 +8,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%] sm:mr-2"
     >
       <LiIcon reference={ref} />
 
@@ -40,8 +40,8 @@ export default function Education() {
   });
   return (
     <>
-      <div className="my-64">
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <div className="my-64 xs:my-24">
+        <h2 className="font-bold text-6xl mb-24 w-full text-center lg:!size-5xl md:!text-5xl sm:!text-3xl xs:!text-4xl">
           {educationTitle}
         </h2>
         <div
@@ -52,6 +52,7 @@ export default function Education() {
             className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light
             md:w-[2px] md:left-[30px] xs:left-[20px]"
             style={{ scaleY: scrollYProgress }}
+            viewport={{ once: true }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             <Details

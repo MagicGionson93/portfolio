@@ -5,7 +5,7 @@ import Skill from "./Skill";
 export default function Skills() {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-6 w-full text-center md:text-6xl md:mt-32">
+      <h2 className="font-bold text-6xl mb-24 w-full text-center lg:!size-5xl md:!text-5xl sm:!text-3xl xs:!text-4xl xl:mb-6">
         Skills
       </h2>
       <div

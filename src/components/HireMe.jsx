@@ -6,7 +6,7 @@ export default function HireMe() {
       <div
         className="fixed left-4 bottom-4  
       flex items-center justify-center overflow-hidden
-      lg:right-6 lg:left-auto lg:-top-2 lg:bottom-auto md:absolute xs:right-6 xs:-top-0
+      lg:right-6 lg:left-auto lg:-top-2 lg:bottom-auto md:absolute xs:right-6 xs:-top-0 lg:hidden
       m
       "
       >

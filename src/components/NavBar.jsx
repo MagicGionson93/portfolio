@@ -204,7 +204,7 @@ export default function NavBar() {
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 w-6 
+              className={`mx-3 flex items-center justify-center rounded-full p-1 w-6 
               ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
             `}
             >
@@ -212,7 +212,7 @@ export default function NavBar() {
             </button>
             <motion.button
               onClick={() => setLang(lang === "it" ? "en" : "it")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 w-8  `}
+              className={`ml-2 flex items-center justify-center rounded-full p-1 w-8  `}
               whileHover={{ scale: 1.2, y: -2 }}
             >
               {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
@@ -245,7 +245,7 @@ export default function NavBar() {
                 <CustomMobileLink
                   href="/portfolio/projects"
                   title={t("navbarLink")}
-                  className=""
+                  className="mb-8"
                   toggle={handleClick}
                 />
                 {/* <CustomMobileLink
@@ -256,13 +256,13 @@ export default function NavBar() {
                 /> */}
               </nav>
 
-              <nav className="flex items-center justify-center flex-wrap ">
+              <nav className="flex items-center justify-center flex-wrap  ">
                 <motion.a
                   href={lang === "it" ? CV : CVeng}
                   target={"_blank"}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-6 mx-3 sm:mx-1"
+                  className="xs:m-1 w-6 mx-3"
                 >
                   <CurriculumIcon />
                 </motion.a>
@@ -271,7 +271,7 @@ export default function NavBar() {
                   target={"_blank"}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="sm:mx-1 w-6 mx-3 bg-light dark:bg-dark rounded-full"
+                  className="xs:m-1 w-6 mx-3 bg-light dark:bg-dark rounded-full"
                 >
                   <GithubIcon />
                 </motion.a>
@@ -280,14 +280,14 @@ export default function NavBar() {
                   target={"_blank"}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-6 mx-3 sm:mx-1"
+                  className="xs:m-1 w-6 mx-3"
                 >
                   <LinkedInIcon />
                 </motion.a>
 
                 <button
                   onClick={() => setMode(mode === "light" ? "dark" : "light")}
-                  className={`sm:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-6 
+                  className={`xs:m-1 mx-3 flex items-center justify-center rounded-full p-1 w-6 
             ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
           `}
                 >
@@ -296,7 +296,7 @@ export default function NavBar() {
 
                 <motion.button
                   onClick={() => setLang(lang === "it" ? "en" : "it")}
-                  className={`sm:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-8 `}
+                  className={`xs:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-8 `}
                   whileHover={{ scale: 1.2, y: -2 }}
                 >
                   {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
