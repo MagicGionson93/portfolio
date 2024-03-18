@@ -1,10 +1,11 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import LiIcon from "./LiIcon";
-import { Transition } from "@headlessui/react";
+import { useTranslation } from "react-i18next";
 
 const Details = ({ position, company, companyLink, time, adress, work }) => {
   const ref = useRef(null);
+
   return (
     <li
       ref={ref}
@@ -38,6 +39,8 @@ const Details = ({ position, company, companyLink, time, adress, work }) => {
 
 export default function Experince() {
   const ref = useRef(null);
+  const { t } = useTranslation();
+  const { experienceTitle, esp1, esp2, esp3, esp3Job } = t("about");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end ", "center start"],
@@ -46,7 +49,7 @@ export default function Experince() {
     <>
       <div className="my-64">
         <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-          Esperienze
+          {experienceTitle}
         </h2>
         <div
           ref={ref}
@@ -64,11 +67,7 @@ export default function Experince() {
               company="Photonic"
               time="2024"
               adress="Taipei, Taiwan"
-              work="Esperienza di 2 mesi grazie a Rotary New Generations Service Exchange.
-              Seguito lo sviluppo della parte front end dell'azienda.
-              Studiato vari tipi di linguaggi come HTML, CSS, Javascript e SQL.
-              Utilizzato diversi componenti come Node, Vite e React.
-              Appreso la cultura lavorativa Taiwanese partecipando a diversi team events e creando legami con i colleghi."
+              work={esp1}
               companyLink="https://www.photonic.com.tw/"
             />
             <Details
@@ -76,23 +75,15 @@ export default function Experince() {
               company="Ruota Libera"
               time="2022-Present"
               adress="Gussago, Brescia"
-              work="Creato sito web tramite la piattaforma di Wordpress, 
-              utilizzando diversi plugin, ricercando la migliore soluzione e 
-              implementando l'utilizzo HTML e CSS.
-              Seguito le varie direttive richieste dal cliente per trovare la soluzione migliore"
+              work={esp2}
               companyLink="https://www.ruotaliberabrescia.com"
             />
             <Details
-              position="IT Manager e riparatore di saldatrici"
+              position={esp3Job}
               company="Proxi srl"
               time="2013-2023"
               adress="Longhena, Brescia"
-              work="Creazione del sito per l'azienda tramite la piattaforma Wix.
-              Gestione della videosorveglianza.
-              Analisi delle avarie e riparazione di vari tipi di saldatrici.
-              Collaborazione con i colleghi.
-              Organizzazione del tempo in base al lavoro e gestione della clientela.
-              Responsabile Magazzino."
+              work={esp3}
               companyLink="https://www.proxisaldatura.com"
             />
           </ul>

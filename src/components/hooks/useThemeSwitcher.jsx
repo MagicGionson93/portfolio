@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 export default function useThemeSwitcher() {
-  const preferDarkQuery = "(prefer-color-scheme: dark)";
   const [mode, setMode] = useState(window.localStorage.getItem("theme"));
 
   useEffect(() => {

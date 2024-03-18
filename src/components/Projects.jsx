@@ -10,6 +10,7 @@ import RuotaLibera from "/images/projects/RuotaLibera.webp";
 import ProxiSaldatura from "/images/projects/ProxiSaldatura.webp";
 import YelpCamp from "/images/projects/YelpCamp.webp";
 import Omnifood from "/images/projects/Omnifood.webp";
+import { useTranslation } from "react-i18next";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -68,7 +69,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   );
 };
 
-const Project = ({ title, type, img, link, github, summary }) => {
+const Project = ({ title, type, img, link, github, summary, visit }) => {
   return (
     <article
       className="group w-full flex flex-col items-center justify-center rounded-2xl
@@ -112,7 +113,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
             target="_blank"
             className=" text-lg font-semibold underline md:text-base"
           >
-            Visita
+            {visit}
           </a>
           {/* <a href={github} target="_blank" className="w-8 md:w-6">
             <GithubIcon />
@@ -124,6 +125,20 @@ const Project = ({ title, type, img, link, github, summary }) => {
 };
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const {
+    projectTitle,
+    pro1,
+    pro2,
+    pro3,
+    pro4,
+    pro1Title,
+    pro2Title,
+    pro3Title,
+    pro4Title,
+    visit,
+  } = t("projects");
+
   return (
     <>
       <TransitionEffect />
@@ -131,7 +146,7 @@ export default function Projects() {
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16 sm:!p-6 xs:p-5">
           <AnimatedText
-            text="Progetti!"
+            text={projectTitle}
             className="mb-16 lg:text-7xl sm:mb-8 sm:!text-5xl xs:!text-2xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-8 xl:gap-y-24  lg:gap-x-8 lg:gap-y-16 md:gap-x-6 md:gap-y-24 sm:gap-x-4 xs:gap-x-0">
@@ -148,38 +163,42 @@ export default function Projects() {
             </div> */}
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
-                title="Negozio di Bici Elettriche"
-                summary="Sito Web creato con Wordpress che mostra le biciclette elettriche che il negozio vende."
+                title={pro1Title}
+                summary={pro1}
                 link="https://ruotaliberabrescia.com/"
-                type="Progetto creato con Wordpress"
+                type="Wordpress, HTML, CSS"
                 img={RuotaLibera}
+                visit={visit}
               />
             </div>
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
-                title="Azienda specializzata nella vendita delle Saldatrici"
-                summary="Sito Web creato con Wix che mostra i vari prodotti che l'azienda vende."
+                title={pro2Title}
+                summary={pro2}
                 link="https://proxisaldatura.com/"
-                type="Progetto creato con Wix"
+                type="Wix"
                 img={ProxiSaldatura}
+                visit={visit}
               />
             </div>
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
-                title="Creazione e gestione di campeggi"
-                summary="Sito Web creato con HTML, CSS, Javascript, Node e MongoDB. Possibilità di registrazione, creazione e gestione di campeggi."
+                title={pro3Title}
+                summary={pro3}
                 link="#"
                 type="HTML, CSS, Javascript, Node e MongoDB"
                 img={YelpCamp}
+                visit={visit}
               />
             </div>
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
-                title="Sito Web vetrina"
-                summary="Sito Web creato con HTML, CSS e Javascript. Creato come sito vetrina e utilizzato diversi tipi di animazioni."
+                title={pro4Title}
+                summary={pro4}
                 link="https://magicgionson93.github.io/omnifood/"
                 type="HTML, CSS e Javascript"
                 img={Omnifood}
+                visit={visit}
               />
             </div>
           </div>

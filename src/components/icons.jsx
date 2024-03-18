@@ -109,6 +109,51 @@ const CurriculumIcon = ({ className, ...rest }) => (
   </svg>
 );
 
+const ItaFlagIcon = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={1500}
+    height={1000}
+    viewBox="0 0 3 2"
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <path fill="#009246" d="M0 0h3v2H0z" />
+    <path fill="#fff" d="M1 0h2v2H1z" />
+    <path fill="#ce2b37" d="M2 0h1v2H2z" />
+  </svg>
+);
+
+const EngFlagIcon = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={1200}
+    height={600}
+    viewBox="0 0 60 30"
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <clipPath id="a">
+      <path d="M0 0v30h60V0z" />
+    </clipPath>
+    <clipPath id="b">
+      <path d="M30 15h30v15zv15H0zH0V0zV0h30z" />
+    </clipPath>
+    <g clipPath="url(#a)">
+      <path fill="#012169" d="M0 0v30h60V0z" />
+      <path stroke="#fff" strokeWidth={6} d="m0 0 60 30m0-30L0 30" />
+      <path
+        stroke="#C8102E"
+        strokeWidth={4}
+        d="m0 0 60 30m0-30L0 30"
+        clipPath="url(#b)"
+      />
+      <path stroke="#fff" strokeWidth={10} d="M30 0v30M0 15h60" />
+      <path stroke="#C8102E" strokeWidth={6} d="M30 0v30M0 15h60" />
+    </g>
+  </svg>
+);
+
 const SunIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -489,4 +534,6 @@ export {
   SunIcon,
   DribbbleIcon,
   CurriculumIcon,
+  ItaFlagIcon,
+  EngFlagIcon,
 };

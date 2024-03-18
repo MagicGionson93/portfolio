@@ -2,8 +2,7 @@ import "../styles/globals.css";
 import "../styles/App.css";
 import "../output.css";
 import profilePic from "/images/profile/profile.webp";
-import CV from "../../public/CV/CV-Giovanni-Pasini.pdf";
-import { LinkArrow } from "../components/icons";
+// import { LinkArrow } from "../components/icons";
 import TransitionEffect from "../components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
 import Image from "../components/Image";
@@ -11,8 +10,11 @@ import Layout from "../components/Layout";
 import HireMe from "../components/HireMe";
 import HeadHelmet from "./HeadHelmet";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
+  const { homeTitle, bio } = t("home");
   return (
     <>
       <TransitionEffect />
@@ -32,21 +34,12 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-start mt-10 lg:w-full lg:text-center">
               <AnimatedText
-                text="Il mio viaggio nel Mondo dello Sviluppo Web"
+                text={homeTitle}
                 className="!text-6xl !text-left 
                 xl:!text-5xl lg:!text-center lg:!size-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="mt-8 text-base font-medium dark:text-light md:text-sm sm:text-xs">
-                Benvenuto nel mio portfolio! Mi chiamo Giovanni Pasini e sono un
-                appassionato junior full-stack developer con una forte dedizione
-                nel trasformare idee in potenti applicazioni web. Vivo in Italia
-                e mi impegno costantemente a rimanere al passo con le più
-                recenti tecnologie e pratiche di sviluppo. Qui potrai esplorare
-                i miei ultimi progetti, che dimostrano la mia competenza
-                specialmente nell'utilizzo di React.js e nello sviluppo web in
-                generale. Sono sempre alla ricerca di nuove sfide e opportunità
-                di crescita, quindi non esitare a contattarmi se desideri
-                collaborare o discutere di idee innovative!
+                {bio}
               </p>
               {/* <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
                 <a

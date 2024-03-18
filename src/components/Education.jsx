@@ -1,7 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import LiIcon from "./LiIcon";
-import { Transition } from "@headlessui/react";
+import { useTranslation } from "react-i18next";
 
 const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
@@ -32,6 +32,8 @@ const Details = ({ type, time, place, info }) => {
 
 export default function Education() {
   const ref = useRef(null);
+  const { t } = useTranslation();
+  const { educationTitle, ed1, ed2, ed3, ed4 } = t("about");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end ", "center start"],
@@ -40,7 +42,7 @@ export default function Education() {
     <>
       <div className="my-64">
         <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-          Educazione
+          {educationTitle}
         </h2>
         <div
           ref={ref}
@@ -57,35 +59,28 @@ export default function Education() {
               company="Udemy"
               time="2024"
               place="Online"
-              info="Aggiornamento programmazione Javascript.
-              Utilizzo di React, Node, Express e MongoDatabase.
-              Approfondito la mia conoscenza sulla creazione di siti web."
+              info={ed1}
             />
             <Details
               type="Udemy / The Complete Web Developer in 2023: Zero To Mastery"
               company="Udemy"
               time="2023"
               place="Online"
-              info="Imparato a programmare in Javascript.
-              Primo approccio con Javascript, React, Node, Machine Learning.
-              Approfondito la mia conoscenza sulla creazione di siti web."
+              info={ed2}
             />
             <Details
               type="Udemy / The Complete Python Bootcamp"
               company="Udemy"
               time="2022 - 2023"
               place="Online"
-              info="Imparato a programmare in Python.
-              Primo approccio con data science, creazione di giochi e applicazioni.
-              Approfondito la mia conoscenza sulla creazione di siti web."
+              info={ed3}
             />
             <Details
               type="Istituto tecnico superiore Piamarta / Perito Informatico"
               company="Istituto Piamarta"
               time="2007 - 2013"
               place="Brescia"
-              info="Studiato linguaggi di programmazione: C++, Java, HTML, CSS, PHP, DOS.
-              Imparato elettrotecnica e come diagnosticare e riparare computer."
+              info={ed4}
             />
           </ul>
         </div>

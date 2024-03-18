@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import CV from "../../public/CV/CV-Giovanni-Pasini.pdf";
+import CV from "/CV/CV-Giovanni-Pasini.pdf";
+import CVeng from "/CV/CV Giovanni Pasini English.pdf";
+import { useTranslation } from "react-i18next";
 
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import {
@@ -13,10 +15,13 @@ import {
   SunIcon,
   MoonIcon,
   CurriculumIcon,
+  ItaFlagIcon,
+  EngFlagIcon,
 } from "./icons";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import Translation from "./Translation";
 
 const CustomLink = ({ href, title, className = "" }) => {
   // console.log(router);
@@ -78,7 +83,9 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 export default function NavBar() {
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState();
+  const [lang, setLang] = Translation();
   let navbarRef = useRef(null);
+  const { t } = useTranslation();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -95,6 +102,16 @@ export default function NavBar() {
 
     // Pulisci l'evento quando il componente viene smontato
   }, [isOpen]);
+
+  // const changeLanguage = (lang) => {
+  //   if (lang === "en") {
+  //     i18n.changeLanguage("it");
+  //     setLang("it");
+  //   } else {
+  //     i18n.changeLanguage("en");
+  //     setLang("en");
+  //   }
+  // };
 
   return (
     <>
@@ -135,7 +152,7 @@ export default function NavBar() {
             />
             <CustomLink
               href="/portfolio/projects"
-              title="Progetti"
+              title={t("navbarLink")}
               className="mx-4"
             />
             {/* <CustomLink href="/articles" title="Articles" className="ml-4" /> */}
@@ -143,7 +160,7 @@ export default function NavBar() {
 
           <nav className="flex items-center justify-center flex-wrap ">
             <motion.a
-              href={CV}
+              href={lang === "it" ? CV : CVeng}
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -178,6 +195,13 @@ export default function NavBar() {
             >
               {mode === "light" ? <SunIcon /> : <MoonIcon />}
             </button>
+            <motion.button
+              onClick={() => setLang(lang === "it" ? "en" : "it")}
+              className={`ml-3 flex items-center justify-center rounded-full p-1 w-6  `}
+              whileHover={{ scale: 1.2, y: -2 }}
+            >
+              {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
+            </motion.button>
           </nav>
         </div>
 
@@ -205,7 +229,7 @@ export default function NavBar() {
                 />
                 <CustomMobileLink
                   href="/portfolio/projects"
-                  title="Progetti"
+                  title={t("navbarLink")}
                   className=""
                   toggle={handleClick}
                 />
@@ -219,7 +243,7 @@ export default function NavBar() {
 
               <nav className="flex items-center justify-center flex-wrap ">
                 <motion.a
-                  href="https://www.linkedin.com/in/giovanni-pasini/"
+                  href={lang === "it" ? CV : CVeng}
                   target={"_blank"}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.9 }}
@@ -254,6 +278,14 @@ export default function NavBar() {
                 >
                   {mode === "light" ? <SunIcon /> : <MoonIcon />}
                 </button>
+
+                <motion.button
+                  onClick={() => setLang(lang === "it" ? "en" : "it")}
+                  className={`sm:ml-1 ml-3 flex items-center justify-center rounded-full p-1 w-6 `}
+                  whileHover={{ scale: 1.2, y: -2 }}
+                >
+                  {lang === "it" ? <EngFlagIcon /> : <ItaFlagIcon />}
+                </motion.button>
               </nav>
             </motion.div>
           )}

@@ -15,8 +15,12 @@ import HeadHelmet from "./HeadHelmet";
 import { useLocation } from "react-router-dom";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import TransitionEffect from "./TransitionEffect";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+  const { line1, line2, line3, line4, aboutTitle, bioTitle, num1, num2, num3 } =
+    t("about");
   const AnimatedNumbers = ({ value }) => {
     const ref = useRef(null);
 
@@ -51,7 +55,7 @@ export default function About() {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16 sm:!p-6 xs:p-5 pb-0">
           <AnimatedText
-            text="Chi sono!"
+            text={aboutTitle}
             className="mb-16 lg:!text-[3.9rem] sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className=" grid w-full grid-cols-8 gap-16 mb-16 dark:text-light sm:gap-8 xs:justify-center">
@@ -60,28 +64,12 @@ export default function About() {
             lg:place-content-center"
             >
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                Biografia
+                {bioTitle}
               </h2>
-              <p className="font-medium">
-                - Diplomato in Informatica presso l'istituto Piamarta a Brescia
-                nel 2013.
-              </p>
-              <p className="font-medium">
-                - Ho lavorato come tecnico, magazziniere e IT manager
-                nell'azienda Proxi Srl per 10 anni. Ora ho capito che voglio
-                fare altro nella vita, voglio imparare diversi lavori e
-                ricominciare a studiare.
-              </p>
-              <p className="font-medium">
-                - Ho eseguito in questo ultimo anno corsi di formazione online
-                sulla programmazione e la creazione di siti web. Sono una
-                persona che si impegna sulle cose che fa e che quando non le sa
-                cerca sempre di trovare la soluzione migliore.
-              </p>
-              <p className="font-medium">
-                - Ho completato una internship presso l'azienda Photonic situata
-                in Taiwan
-              </p>
+              <p className="font-medium">- {line1}</p>
+              <p className="font-medium">- {line2}</p>
+              <p className="font-medium">- {line3}</p>
+              <p className="font-medium">- {line4}</p>
             </div>
 
             <div
@@ -105,7 +93,7 @@ export default function About() {
                   <AnimatedNumbers value={3} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
+                  {num1}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -113,7 +101,7 @@ export default function About() {
                   <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  projects completed
+                  {num2}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -121,7 +109,7 @@ export default function About() {
                   <AnimatedNumbers value={1} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  years of experience
+                  {num3}
                 </h2>
               </div>
             </div>
