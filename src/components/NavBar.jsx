@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -21,7 +22,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   // console.log(router.pathname);
 
   return (
-    <a href={href} className={`${className} relative group`}>
+    <Link to={href} className={`${className} relative group`}>
       {title}
 
       <span
@@ -34,7 +35,7 @@ const CustomLink = ({ href, title, className = "" }) => {
       >
         &nbsp;
       </span>
-    </a>
+    </Link>
   );
 };
 
