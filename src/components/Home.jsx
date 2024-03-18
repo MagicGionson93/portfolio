@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/App.css";
 import "../output.css";
 import profilePic from "/images/profile/profile.webp";
+import CV from "../../CV/CV-Giovanni-Pasini.pdf";
 import { LinkArrow } from "../components/icons";
 import TransitionEffect from "../components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
@@ -42,7 +43,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
                 <a
-                  href=".\CV\CV-Giovanni-Pasini.pdf"
+                  href={CV}
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 
                    rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark
