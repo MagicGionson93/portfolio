@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Logo() {
   return (
-    <div className="flex items-center justify-center lg:mt-0 mt-1">
+    <div className="flex items-center justify-center lg:mt-0 mt-1 xs:ml-1">
       <motion.a
         href="/portfolio/"
         className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2x1 font-bold 

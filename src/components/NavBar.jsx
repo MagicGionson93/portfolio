@@ -306,7 +306,7 @@ export default function NavBar() {
           )}
         </AnimatePresence>
 
-        <div className="absolute left-[50%] top-2 translate-x-[-50%] xs:left-[44%]">
+        <div className="absolute left-[50%] top-2 translate-x-[-50%] xs:left-[50%]">
           <Logo />
         </div>
       </header>

@@ -147,7 +147,7 @@ export default function Projects() {
         <Layout className="pt-16 sm:!p-6 xs:p-5">
           <AnimatedText
             text={projectTitle}
-            className="mb-16 lg:text-7xl sm:mb-8 sm:!text-5xl xs:!text-2xl"
+            className="mb-16 lg:!text-[3.9rem] sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-8 xl:gap-y-24  lg:gap-x-8 lg:gap-y-16 md:gap-x-6 md:gap-y-24 sm:gap-x-4 xs:gap-x-0">
             {/* <div className="col-span-12"> */}
