@@ -83,7 +83,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
       <motion.div
         href={link}
         target="_blank"
-        className="w-full overflow-hidden rounded-lg h-64"
+        className="w-full overflow-hidden rounded-lg h-64 "
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
       >
@@ -98,7 +98,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
           target="_blank"
           className="hover:underline underline-offset-4"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl h-16 xl:h-24 md:h-16">
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl h-16 xl:h-24 sm:h-auto md:h-auto xs:h-auto">
             {title}
           </h2>
         </a>
