@@ -124,9 +124,17 @@ export default function NavBar() {
         {/* navbar for lg */}
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav>
-            <CustomLink href="/" title="Home" className="mr-4 " />
-            <CustomLink href="/about" title="About" className="mx-4" />
-            <CustomLink href="/projects" title="Progetti" className="mx-4" />
+            <CustomLink href="/portfolio/home" title="Home" className="mr-4 " />
+            <CustomLink
+              href="/portfolio/about"
+              title="About"
+              className="mx-4"
+            />
+            <CustomLink
+              href="/portfolio/projects"
+              title="Progetti"
+              className="mx-4"
+            />
             {/* <CustomLink href="/articles" title="Articles" className="ml-4" /> */}
           </nav>
 
@@ -172,7 +180,7 @@ export default function NavBar() {
             >
               <nav className="flex items-center flex-col justify-center">
                 <CustomMobileLink
-                  href="/"
+                  href="/home"
                   title="Home"
                   className=""
                   toggle={handleClick}
