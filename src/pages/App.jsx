@@ -1,5 +1,11 @@
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
 import "../styles/globals.css";
 import "../styles/App.css";
@@ -18,23 +24,47 @@ function App() {
   return (
     <>
       <TransitionEffect />
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="portfolio/Home" element={<Home />} />
-          {/* <Route path="/Portfolio" element={<Home />} /> */}
-          <Route path="/portfolio/About" element={<About />} />
-          <Route path="portfolio/Projects" element={<Projects />} />
-          {/* <Route path="/Articles" element={<Articles />} /> */}
-          <Route path="*" element={<NotFound />} />
-          {/* <Route path="/Experience" element={<Experince />} /> */}
-          {/* <Route path="/Projects" element={<Projects />} /> */}
-          {/* <About /> */}
-        </Routes>
-      </BrowserRouter>
+      <NavBar />
+      <Outlet />
+
       <Footer />
     </>
   );
 }
 
 export default App;
+
+//metodo con browser router
+
+{
+  /* <Home />
+      <About /> */
+}
+{
+  /* <Projects /> */
+}
+{
+  /* <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Projects" element={<Projects />} />
+          {/* <Route path="/Articles" element={<Articles />} /> */
+}
+{
+  /* <Route path="*" element={<NotFound />} /> */
+}
+{
+  /* <Route path="/Experience" element={<Experince />} /> */
+}
+{
+  /* <Route path="/Projects" element={<Projects />} /> */
+}
+{
+  /* <About /> */
+}
+{
+  /* </Routes>
+      </BrowserRouter> */
+}

@@ -124,7 +124,7 @@ export default function NavBar() {
         {/* navbar for lg */}
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav>
-            <CustomLink href="/portfolio/home" title="Home" className="mr-4 " />
+            <CustomLink href="/portfolio/" title="Home" className="mr-4 " />
             <CustomLink
               href="/portfolio/about"
               title="About"
