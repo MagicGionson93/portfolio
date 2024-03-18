@@ -22,8 +22,8 @@ export default function Home() {
       <HeadHelmet title={useLocation().pathname} />
 
       {/* <NavBar /> */}
-      <main className="flex items-center text-dark w-full min-h-screen">
-        <Layout className="pt-0 pb-24  sm:!p-6 xs:p-5">
+      <main className="flex items-center text-dark w-full min-h-screen xs:p-0">
+        <Layout className="pt-0 pb-24  sm:!p-6 xs:p-6">
           <div className="flex items-center justify-between w-full lg:flex-col   ">
             <div className="w-1/2 lg:w-3/4">
               <Image
@@ -36,7 +36,7 @@ export default function Home() {
               <AnimatedText
                 text={homeTitle}
                 className="!text-6xl !text-left 
-                xl:!text-5xl lg:!text-center lg:!size-6xl md:!text-5xl sm:!text-3xl"
+                xl:!text-5xl lg:!text-center lg:!size-6xl md:!text-5xl sm:!text-3xl xs:!text-2xl"
               />
               <p className="mt-8 text-base font-medium dark:text-light md:text-sm sm:text-xs">
                 {bio}

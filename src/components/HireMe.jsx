@@ -6,13 +6,13 @@ export default function HireMe() {
       <div
         className="fixed left-4 bottom-4  
       flex items-center justify-center overflow-hidden
-      lg:right-6 lg:left-auto lg:-top-2 lg:bottom-auto md:absolute xs:right-0 xs:-top-2
+      lg:right-6 lg:left-auto lg:-top-2 lg:bottom-auto md:absolute xs:right-6 xs:-top-0
       m
       "
       >
         <div
           className="w-48 h-auto flex items-center justify-center relative
-        lg:w-24 "
+        lg:w-24 xs:w-20"
         >
           <CircularText
             className={"fill-dark animate-spin-slow dark:fill-light"}

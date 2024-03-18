@@ -131,9 +131,9 @@ export default function NavBar() {
   return (
     <>
       <header
-        className="mmd:sticky mmd:z-30 mmd:top-0 w-full px-32 py-8 font-medium flex items-center justify-between
-                  
-      dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 mmd:backdrop-blur-xl mmd:border-b-2 mmd:border-dark mmd:dark:border-light "
+        className=" w-full px-32 py-8 font-medium flex items-center justify-between                  
+      dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 xs:px-2
+      mmd:sticky mmd:z-30 mmd:top-0 mmd:backdrop-blur-xl mmd:border-b-2 mmd:border-dark mmd:dark:border-light "
         ref={navbarRef}
       >
         <button
@@ -306,7 +306,7 @@ export default function NavBar() {
           )}
         </AnimatePresence>
 
-        <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+        <div className="absolute left-[50%] top-2 translate-x-[-50%] xs:left-[44%]">
           <Logo />
         </div>
       </header>
