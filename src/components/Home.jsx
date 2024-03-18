@@ -42,7 +42,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
                 <a
-                  href="../../CV/CV-Giovanni-Pasini.pdf"
+                  href=".\CV\CV-Giovanni-Pasini.pdf"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 
                    rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark
