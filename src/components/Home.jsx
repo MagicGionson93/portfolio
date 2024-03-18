@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/App.css";
 import "../output.css";
 import profilePic from "/images/profile/profile.webp";
-import CV from "../../CV/CV-Giovanni-Pasini.pdf";
+import CV from "../../public/CV/CV-Giovanni-Pasini.pdf";
 import { LinkArrow } from "../components/icons";
 import TransitionEffect from "../components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
