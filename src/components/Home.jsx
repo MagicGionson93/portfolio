@@ -32,7 +32,7 @@ export default function Home() {
                 classProp="w-3/4 h-auto xl:w-full rounded-md md:inline-block md:w-full lg:mx-auto lg:!-mt-8 "
               />
             </div>
-            <div className="w-1/2 flex flex-col items-center self-start mt-10 lg:w-full lg:text-center xl:pl-4">
+            <div className="w-1/2 flex flex-col items-center self-start mt-10 lg:w-full lg:text-center lg:!pl-0 sm:p-0 md:p-0 xl:pl-4">
               <AnimatedText
                 text={homeTitle}
                 className="!text-6xl !text-left 

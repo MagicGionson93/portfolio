@@ -38,7 +38,7 @@ i18n
             esp1: "2 months experience thanks to Rotary New Generations Service Exchange. Followed the development of the front end part of the company. Studied various types of languages ​​such as HTML, CSS, Javascript and SQL. Used different components such as Node, Vite and React. Learned about Taiwanese work culture by participating in various team events and bonding with colleagues.",
             esp2: "Created website via the Wordpress platform, using various plugins, searching for the best solution and implementing the use of HTML and CSS. Followed the various directives requested by the client to find the best solution",
             esp3: "Creation of the site for the company via the Wix platform. Management of video surveillance. Failure analysis and repair of various types of welding machines. Collaboration with colleagues. Organization of time based on work and customer management. Warehouse manager. ",
-            esp3Job: "IT Manager and Welding Repairman",
+            esp3Job: "IT Manager and Repairman",
             educationTitle: "Education",
             ed1: "Javascript programming update. Using React, Node, Express and MongoDatabase. Deepened my knowledge on creating websites.",
             ed2: "Learned to program in Javascript. First approach with Javascript, React, Node, Machine Learning. Deepened my knowledge on creating websites.",
