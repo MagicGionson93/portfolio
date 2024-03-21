@@ -6,6 +6,7 @@ import AnimatedText from "./AnimatedText";
 import Image from "./Image";
 import { GithubIcon } from "./icons";
 import TransitionEffect from "./TransitionEffect";
+import Iphone from "/images/projects/iPhone-webiste.webp";
 import RuotaLibera from "/images/projects/RuotaLibera.webp";
 import ProxiSaldatura from "/images/projects/ProxiSaldatura.webp";
 import YelpCamp from "/images/projects/YelpCamp.webp";
@@ -132,10 +133,12 @@ export default function Projects() {
     pro2,
     pro3,
     pro4,
+    pro5,
     pro1Title,
     pro2Title,
     pro3Title,
     pro4Title,
+    pro5Title,
     visit,
   } = t("projects");
 
@@ -161,6 +164,16 @@ export default function Projects() {
                 img={imgProject1}
               />
             </div> */}
+            <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
+              <Project
+                title={pro5Title}
+                summary={pro5}
+                link="https://magicgionson93.github.io/iPhone-website/"
+                type="HTML, CSS, Javascript, React, GSAP, Three, Tailwind"
+                img={Iphone}
+                visit={visit}
+              />
+            </div>
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
                 title={pro1Title}
