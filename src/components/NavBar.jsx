@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import CV from "/CV/CV-Giovanni-Pasini.pdf";
-import CVeng from "/CV/CV Giovanni Pasini English.pdf";
+import CVeng from "/CV/Resume Giovanni Pasini.pdf";
 import { useTranslation } from "react-i18next";
 
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
