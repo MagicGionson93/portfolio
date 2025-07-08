@@ -57,7 +57,7 @@ i18n
             pro4: "Website created with HTML, CSS and Javascript. Created as a showcase site and used different types of animations.",
             pro5Title: "Iphone webiste with 3D render",
             pro5: "Website that shows with visual effects the new Iphone 15. I used GSAP and Three for the animations with a 3D render of the iPhone.",
-            pro6Title: "Iphone webiste with 3D render",
+            pro6Title: "Website with movie search via API",
             pro6: "Website where you can search for movies and add them as favorites. Search uses API.",
             visit: "Visit",
           },
