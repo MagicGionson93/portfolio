@@ -52,19 +52,6 @@ This project streamlines the process of building a visually engaging, responsive
 - 🌍 **🌐 Internationalization** – Built-in multi-language support.
 - ✨ **🎥 Engaging Animations** – Transitions and components for a polished user experience.
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Programming Language:** JavaScript  
-- **Package Manager:** [npm](https://www.npmjs.com/)
-
----
-
-### Installation
-
 1. **Clone the repository:**
 
 ```sh
