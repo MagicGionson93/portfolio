@@ -171,7 +171,7 @@ export default function Projects() {
               <Project
                 title={pro6Title}
                 summary={pro6}
-                link="https://magicgionson93.github.io/MovieApi/"
+                link="https://magicgionson93.github.io/"
                 type="HTML, CSS, React, Vite"
                 img={MovieApi}
                 visit={visit}
@@ -186,7 +186,7 @@ export default function Projects() {
                 img={Iphone}
                 visit={visit}
               />
-            </div>            
+            </div>
             <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
                 title={pro1Title}
