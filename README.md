@@ -5,13 +5,9 @@ It shows who I am, my studies and my projects.
 You can find my CV and my linkedin page.
 
 Create commit: 
-npm run build
-npm run preview
+git add . <br>
+git commit -m "Aggiorno il sito" <br>
+git push origin master   # o main <br>
+npm run build <br>
+npm run deploy <br>
 
-git add .
-git commit -m "Descrivi qui le modifiche"
-
-git push origin master
-
-npm run build
-npm run deploy
