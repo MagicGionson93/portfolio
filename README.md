@@ -26,17 +26,6 @@
 
 ---
 
-## 📚 Table of Contents
-
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
-
----
-
 ## 🧾 Overview
 
 **Portfolio** is a modern, React-based web template crafted to showcase your personal background, projects, and achievements with style and flexibility. Built with a component-driven architecture, it simplifies customization and scaling for developers aiming to create a professional online presence.
