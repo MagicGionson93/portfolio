@@ -171,7 +171,7 @@ export default function Projects() {
               <Project
                 title={pro6Title}
                 summary={pro6}
-                link="https://magicgionson93.github.io/MovieApi"
+                link="https://magicgionson93.github.io/movieapi"
                 type="HTML, CSS, React, Vite"
                 img={MovieApi}
                 visit={visit}
